@@ -2,15 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <!-- Ensures proper rendering on mobile devices -->
+  <!-- Mobile-friendly scaling -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Samruta Luxury Events | Where Elegance Meets All</title>
+
+  <!-- Font Awesome Icons -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
   />
+
   <style>
-    /* Base Styles & Reset */
+    /****************************************************
+     * GENERAL RESETS & BASE STYLES
+     ****************************************************/
     * {
       margin: 0;
       padding: 0;
@@ -25,9 +31,11 @@
       color: #fff;
     }
 
-    /* Header */
+    /****************************************************
+     * HEADER SECTION
+     ****************************************************/
     header {
-      background: url("grand-luxury-header.jpg") no-repeat center center/cover;
+      background: url("grand-luxury-header.jpg") no-repeat center center / cover;
       text-align: center;
       padding: 180px 20px;
       font-size: 65px;
@@ -35,14 +43,24 @@
       letter-spacing: 4px;
       text-transform: uppercase;
       box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.6);
+      position: relative;
     }
-    header .logo {
+    /* LOGO Styling - use a high-resolution image for clarity */
+    .logo {
       display: block;
       margin: 0 auto 20px auto;
-      max-width: 200px; /* Adjust as needed */
+      max-width: 300px; /* Increase or decrease as needed */
+      height: auto;     /* Maintains aspect ratio */
+    }
+    .tagline {
+      font-size: 2.2rem;
+      margin-top: 10px;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
     }
 
-    /* Navigation */
+    /****************************************************
+     * NAVIGATION
+     ****************************************************/
     nav {
       display: flex;
       justify-content: center;
@@ -58,20 +76,23 @@
       color: #e0b973;
       margin: 0 30px;
       text-decoration: none;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       font-weight: bold;
-      transition: 0.3s;
+      transition: color 0.3s ease;
     }
     nav a:hover {
       color: #fff;
     }
 
-    /* Hero Section */
+    /****************************************************
+     * HERO SECTION
+     ****************************************************/
     .hero {
       background: url("gold-luxury-event-bg.jpg") no-repeat center center/cover;
       text-align: center;
       padding: 200px 20px;
       text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+      position: relative;
     }
     .hero h1 {
       font-size: 4rem;
@@ -90,13 +111,15 @@
       border-radius: 5px;
       font-size: 1.2rem;
       cursor: pointer;
-      transition: 0.3s;
+      transition: background 0.3s;
     }
     .hero button:hover {
       background: #caa25c;
     }
 
-    /* Container & Section */
+    /****************************************************
+     * CONTAINER & SECTION TITLES
+     ****************************************************/
     .container {
       width: 90%;
       max-width: 1500px;
@@ -113,18 +136,23 @@
       padding-bottom: 20px;
       color: #f9e6c5;
     }
+
+    /****************************************************
+     * ABOUT US
+     ****************************************************/
     .about-text {
       font-size: 1.4rem;
       text-align: center;
       line-height: 1.8;
       max-width: 1250px;
-      margin: 0 auto;
+      margin: 0 auto 40px auto;
       font-weight: 500;
       color: #f4d7a3;
-      margin-bottom: 40px;
     }
 
-    /* Query Section */
+    /****************************************************
+     * QUERY FORM SECTION
+     ****************************************************/
     #query {
       background: rgba(0, 0, 0, 0.5);
       margin-top: 40px;
@@ -167,13 +195,15 @@
       border-radius: 5px;
       font-size: 1.2rem;
       cursor: pointer;
-      transition: 0.3s;
+      transition: background 0.3s;
     }
     .query-form button:hover {
       background: #caa25c;
     }
 
-    /* Footer */
+    /****************************************************
+     * FOOTER
+     ****************************************************/
     footer {
       background: #1a1a1a;
       color: #fff;
@@ -183,15 +213,24 @@
       border-top: 4px solid #e0b973;
     }
 
-    /* Media Queries for Mobile Responsiveness */
+    /****************************************************
+     * MEDIA QUERIES (MOBILE RESPONSIVENESS)
+     ****************************************************/
     @media screen and (max-width: 768px) {
       header {
         padding: 120px 10px;
         font-size: 2rem;
       }
+      nav {
+        flex-wrap: wrap;
+        padding: 15px;
+      }
       nav a {
-        margin: 0 15px;
+        margin: 5px 15px;
         font-size: 1rem;
+      }
+      .hero {
+        padding: 150px 10px;
       }
       .hero h1 {
         font-size: 2.5rem;
@@ -205,7 +244,6 @@
       }
       .section-title {
         font-size: 2rem;
-        margin-bottom: 30px;
       }
       .about-text {
         font-size: 1rem;
@@ -225,19 +263,21 @@
     }
   </style>
 </head>
+
 <body>
-  <!-- Header Section -->
+  <!-- ================== HEADER SECTION ================== -->
   <header>
-    <!-- Optional: Use an actual logo image. If you don't have an image, remove this <img />. -->
+    <!-- Replace 'highres-logo.png' with your own high-resolution logo filename -->
     <img
-      src="gold-luxury-logo.png"
+      src="highres-logo.png"
       alt="Samruta Luxury Events Logo"
       class="logo"
     />
-    Samruta Luxury Events - Elegant Celebrations for Everyone
+    Samruta Luxury Events
+    <div class="tagline">Where Elegance Meets All</div>
   </header>
 
-  <!-- Navigation -->
+  <!-- ================== NAVIGATION ================== -->
   <nav>
     <a href="#about">About</a>
     <a href="#services">Services</a>
@@ -246,14 +286,14 @@
     <a href="#query">Send a Query</a>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- ================== HERO SECTION ================== -->
   <section class="hero">
     <h1>Where Every Dream Becomes a Reality</h1>
     <p>Luxury Experiences for All – From Grand to Intimate</p>
     <button>Plan Your Perfect Event</button>
   </section>
 
-  <!-- Main Container -->
+  <!-- ================== MAIN CONTENT ================== -->
   <div class="container">
     <!-- About Section -->
     <section id="about">
@@ -295,23 +335,31 @@
         bespoke solution.
       </p>
       <div class="query-form">
-        <!-- NOTE: 'mailto:' will open the user's default email client. 
-             If you'd like to avoid that, use a server or a form service (Netlify Forms, Formspree, etc.) -->
-        <form action="mailto:Saisampathparimi12@gmail.com" method="post" enctype="text/plain">
-          <label for="name">Full Name:</label><br>
-          <input type="text" id="name" name="name" required><br>
+        <!-- Using 'mailto:' will open the user's default email app -->
+        <form
+          action="mailto:Saisampathparimi12@gmail.com"
+          method="post"
+          enctype="text/plain"
+        >
+          <label for="name">Full Name:</label><br />
+          <input type="text" id="name" name="name" required /><br />
 
-          <label for="email">Email Address:</label><br>
-          <input type="email" id="email" name="email" required><br>
+          <label for="email">Email Address:</label><br />
+          <input type="email" id="email" name="email" required /><br />
 
-          <label for="phone">Phone Number:</label><br>
-          <input type="tel" id="phone" name="phone" required><br>
+          <label for="phone">Phone Number:</label><br />
+          <input type="tel" id="phone" name="phone" required /><br />
 
-          <label for="eventType">Type of Event:</label><br>
-          <input type="text" id="eventType" name="eventType" required><br>
+          <label for="eventType">Type of Event:</label><br />
+          <input type="text" id="eventType" name="eventType" required /><br />
 
-          <label for="message">Additional Details:</label><br>
-          <textarea id="message" name="message" rows="5" required></textarea><br>
+          <label for="message">Additional Details:</label><br />
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            required
+          ></textarea><br />
 
           <button type="submit">Submit Query</button>
         </form>
@@ -319,7 +367,7 @@
     </section>
   </div>
 
-  <!-- Footer -->
+  <!-- ================== FOOTER ================== -->
   <footer>
     <p>&copy; 2025 Samruta Luxury Events | Celebrating Every Moment with Grace</p>
   </footer>
