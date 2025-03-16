@@ -1,0 +1,7 @@
+
+        body { font-family: 'Playfair Display', serif; margin: 0; padding: 0; background: linear-gradient(180deg, #1a1a1a, #5b3a2e, #e0b973); color: #fff; }
+        header { text-align: center; font-size: 65px; font-weight: bold; padding: 50px; }
+        nav { text-align: center; padding: 15px; background: #000; }
+        nav a { color: #e0b973; margin: 0 20px; text-decoration: none; font-size: 20px; }
+        .hero { text-align: center; padding: 100px; }
+    
