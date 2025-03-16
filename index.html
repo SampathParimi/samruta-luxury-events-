@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <!-- Mobile friendly -->
+  <!-- Mobile friendly scaling -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Samruta Luxury Events | Where Elegance Meets All</title>
 
-  <!-- (Optional) Font Awesome Icons -->
+  <!-- (Optional) Font Awesome -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -24,7 +24,7 @@
       box-sizing: border-box;
     }
     html {
-      scroll-behavior: smooth;
+      scroll-behavior: smooth; /* Global smooth scrolling to anchors */
     }
     body {
       font-family: "Playfair Display", serif;
@@ -53,7 +53,7 @@
       text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
     }
 
-    /* NAVIGATION */
+    /* NAV */
     nav {
       display: flex;
       justify-content: center;
@@ -108,7 +108,7 @@
       background: #caa25c;
     }
 
-    /* CONTAINER & SECTION TITLES */
+    /* SECTION CONTAINER & TITLES */
     .container {
       width: 90%;
       max-width: 1500px;
@@ -354,7 +354,10 @@
   <section class="hero">
     <h1>Where Every Dream Becomes a Reality</h1>
     <p>Luxury Experiences for All – From Grand to Intimate</p>
-    <button>Plan Your Perfect Event</button>
+    <!-- Button triggers confetti + scroll to #query again -->
+    <button onclick="launchConfetti();document.getElementById('query').scrollIntoView({behavior:'smooth'});">
+      Plan Your Perfect Event
+    </button>
   </section>
 
   <!-- ========== MAIN CONTENT ========== -->
@@ -446,7 +449,7 @@
         bespoke solution.
       </p>
       <div class="query-form">
-        <!-- 'mailto:' will open the user's default email app. For in-page submission, use a form service. -->
+        <!-- 'mailto:' will open user's email client. For in-page submission, use form service. -->
         <form action="mailto:Saisampathparimi12@gmail.com" method="post" enctype="text/plain">
           <label for="name">Full Name:</label><br />
           <input type="text" id="name" name="name" required /><br />
@@ -483,13 +486,16 @@
     </div>
   </footer>
 
-  <!-- ========== CONFETTI ON PAGE LOAD SCRIPT ========== -->
+  <!-- ========== CONFETTI SCRIPT ========== -->
   <script>
-    // When the page loads, immediately launch a short burst of confetti
+    // Confetti on page load
     window.addEventListener('load', () => {
-      const duration = 2 * 1000; // 2 second confetti
-      const end = Date.now() + duration;
+      launchConfetti(2); // 2 second duration on page load
+    });
 
+    // Confetti function (duration in seconds)
+    function launchConfetti(durationSeconds = 2) {
+      const end = Date.now() + durationSeconds * 1000;
       (function frame() {
         // Launch small bursts from left & right
         confetti({
@@ -504,12 +510,11 @@
           spread: 45,
           origin: { x: 1 },
         });
-
         if (Date.now() < end) {
           requestAnimationFrame(frame);
         }
       })();
-    });
+    }
   </script>
 </body>
 </html>
