@@ -14,16 +14,14 @@
   />
 
   <style>
-    /****************************************************
-     * GENERAL RESETS & BASE STYLES
-     ****************************************************/
+    /* RESET & BASE STYLES */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
     html {
-      scroll-behavior: smooth; /* Smooth scrolling to anchors */
+      scroll-behavior: smooth;
     }
     body {
       font-family: "Playfair Display", serif;
@@ -31,35 +29,28 @@
       color: #fff;
     }
 
-    /****************************************************
-     * HEADER
-     ****************************************************/
+    /* HEADER */
     header {
       background: url("grand-luxury-header.jpg") no-repeat center center/cover;
       text-align: center;
       padding: 180px 20px;
-      font-size: 65px;
       font-weight: bold;
       letter-spacing: 4px;
       text-transform: uppercase;
       box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.6);
       position: relative;
     }
-    .logo {
-      display: block;
-      margin: 0 auto 20px auto;
-      max-width: 300px;
-      height: auto;
+    .brand-name {
+      font-size: 64px; /* Larger for brand name */
+      margin-bottom: 10px;
     }
     .tagline {
-      font-size: 2.2rem;
+      font-size: 28px; /* Slightly smaller tagline */
       margin-top: 10px;
       text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
     }
 
-    /****************************************************
-     * NAVIGATION
-     ****************************************************/
+    /* NAVIGATION */
     nav {
       display: flex;
       justify-content: center;
@@ -83,9 +74,7 @@
       color: #fff;
     }
 
-    /****************************************************
-     * HERO
-     ****************************************************/
+    /* HERO */
     .hero {
       background: url("gold-luxury-event-bg.jpg") no-repeat center center/cover;
       text-align: center;
@@ -116,9 +105,7 @@
       background: #caa25c;
     }
 
-    /****************************************************
-     * CONTAINER & SECTION TITLES
-     ****************************************************/
+    /* CONTAINER & SECTION TITLES */
     .container {
       width: 90%;
       max-width: 1500px;
@@ -136,9 +123,7 @@
       color: #f9e6c5;
     }
 
-    /****************************************************
-     * ABOUT US
-     ****************************************************/
+    /* ABOUT US */
     .about-text {
       font-size: 1.4rem;
       text-align: center;
@@ -149,9 +134,7 @@
       color: #f4d7a3;
     }
 
-    /****************************************************
-     * SERVICES
-     ****************************************************/
+    /* SERVICES */
     #services {
       margin-top: 40px;
       border-radius: 15px;
@@ -187,9 +170,7 @@
       box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
     }
 
-    /****************************************************
-     * PORTFOLIO
-     ****************************************************/
+    /* PORTFOLIO */
     #portfolio {
       margin-top: 40px;
       border-radius: 15px;
@@ -214,16 +195,16 @@
       display: block;
       border-bottom: 4px solid #e0b973;
     }
-    .portfolio-item .portfolio-details {
+    .portfolio-details {
       padding: 20px;
       text-align: center;
     }
-    .portfolio-item h4 {
+    .portfolio-details h4 {
       font-size: 1.4rem;
       margin-bottom: 10px;
       color: #f9e6c5;
     }
-    .portfolio-item p {
+    .portfolio-details p {
       font-size: 1rem;
       line-height: 1.6;
       color: #f4d7a3;
@@ -234,9 +215,7 @@
       box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
     }
 
-    /****************************************************
-     * QUERY FORM (Formspree + AJAX)
-     ****************************************************/
+    /* QUERY FORM */
     #query {
       background: rgba(0, 0, 0, 0.5);
       margin-top: 40px;
@@ -286,27 +265,7 @@
       background: #caa25c;
     }
 
-    /* Thank You / Error Messages */
-    .response-message {
-      font-size: 1.2rem;
-      margin-top: 20px;
-      color: #fff;
-      text-align: center;
-      background: rgba(0, 0, 0, 0.4);
-      padding: 10px;
-      border-radius: 5px;
-      display: none; /* Initially hidden */
-    }
-    .response-message.success {
-      border-left: 6px solid #5fbf62;
-    }
-    .response-message.error {
-      border-left: 6px solid #f55;
-    }
-
-    /****************************************************
-     * FOOTER
-     ****************************************************/
+    /* FOOTER */
     footer {
       background: #1a1a1a;
       color: #fff;
@@ -315,17 +274,22 @@
       font-size: 1.2rem;
       border-top: 4px solid #e0b973;
     }
+    .contact-info {
+      margin-top: 20px;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
 
-    /****************************************************
-     * MEDIA QUERIES (RESPONSIVE)
-     ****************************************************/
+    /* RESPONSIVE */
     @media screen and (max-width: 768px) {
       header {
         padding: 120px 10px;
+      }
+      .brand-name {
         font-size: 2rem;
       }
-      .logo {
-        max-width: 200px;
+      .tagline {
+        font-size: 1.2rem;
       }
       nav {
         flex-wrap: wrap;
@@ -357,15 +321,8 @@
       }
       .service-card,
       .portfolio-item {
-        width: 80% !important; /* Full width on mobile */
+        width: 80% !important; /* full width on mobile */
         margin: auto;
-      }
-      .query-text {
-        font-size: 1rem;
-      }
-      .query-form input,
-      .query-form textarea {
-        font-size: 1rem;
       }
       footer {
         font-size: 1rem;
@@ -374,21 +331,15 @@
     }
   </style>
 </head>
-
 <body>
-  <!-- ================== HEADER ================== -->
+
+  <!-- ========== HEADER ========== -->
   <header>
-    <!-- Logo embedded as data URI or you can replace with your own image file -->
-    <img
-      src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIzMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjYzI5ZDVmIi8+CiA8dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1zaXplPSIyNCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2ZmZiIgZm9udC1mYW1pbHk9IlBsYXlmYWlyIERpc3BsYXkiIGZvbnQtd2VpZ2h0PSJib2xkIiBkeT0iLjNlbSI+U2FtcnV0YSBMdXh1cnk8L3RleHQ+Cjwvc3ZnPgo="
-      alt="Samruta Luxury Logo"
-      class="logo"
-    />
-    Samruta Luxury Events
+    <div class="brand-name">Samruta Luxury Events</div>
     <div class="tagline">Where Elegance Meets All</div>
   </header>
 
-  <!-- ================== NAVIGATION ================== -->
+  <!-- ========== NAVIGATION ========== -->
   <nav>
     <a href="#about">About</a>
     <a href="#services">Services</a>
@@ -396,14 +347,14 @@
     <a href="#query">Send a Query</a>
   </nav>
 
-  <!-- ================== HERO ================== -->
+  <!-- ========== HERO ========== -->
   <section class="hero">
     <h1>Where Every Dream Becomes a Reality</h1>
     <p>Luxury Experiences for All – From Grand to Intimate</p>
     <button>Plan Your Perfect Event</button>
   </section>
 
-  <!-- ================== MAIN CONTENT ================== -->
+  <!-- ========== MAIN CONTENT ========== -->
   <div class="container">
     <!-- About Section -->
     <section id="about">
@@ -415,11 +366,7 @@
         our expertise ensures that every moment is magical.
       </p>
       <p class="about-text">
-        Our journey is led by the visionary <b>Sampath Parimi</b>, who believes
-        that luxury is not just about grandeur but about creating unforgettable
-        moments for everyone. From dream weddings and corporate galas to cultural
-        celebrations and milestone birthdays, we tailor each event to perfection,
-        blending tradition with innovation.
+        Our journey is led by our <b>CEO, Sampath Parimi</b>, whose dedication to unparalleled detail sets the stage for unforgettable experiences. From dream weddings and corporate galas to cultural celebrations and milestone birthdays, we tailor each event to perfection, blending tradition with innovation.
       </p>
       <p class="about-text">
         <b>What sets us apart?</b><br>
@@ -447,15 +394,15 @@
         </div>
         <div class="service-card">
           <h3>Corporate Events</h3>
-          <p>Professional, impactful events that captivate your audience.</p>
+          <p>Professional and engaging events that leave a lasting impression.</p>
         </div>
         <div class="service-card">
           <h3>Private Parties</h3>
-          <p>Birthdays, anniversaries, and gatherings full of elegance.</p>
+          <p>Memorable birthdays, anniversaries, and family gatherings.</p>
         </div>
         <div class="service-card">
           <h3>VIP Galas</h3>
-          <p>High-profile soirees for celebrities and dignitaries.</p>
+          <p>Exclusive, star-studded affairs for high-profile clientele.</p>
         </div>
       </div>
     </section>
@@ -468,27 +415,27 @@
           <img src="placeholder1.jpg" alt="Wedding Portfolio" />
           <div class="portfolio-details">
             <h4>Grand Wedding Setup</h4>
-            <p>Stunning floral designs for a fairytale celebration.</p>
+            <p>Stunning floral designs and elegant decor for a fairytale celebration.</p>
           </div>
         </div>
         <div class="portfolio-item">
           <img src="placeholder2.jpg" alt="Corporate Portfolio" />
           <div class="portfolio-details">
             <h4>Executive Retreat</h4>
-            <p>Seamless corporate event with top-tier hospitality.</p>
+            <p>Seamless corporate event with top-tier hospitality and style.</p>
           </div>
         </div>
         <div class="portfolio-item">
           <img src="placeholder3.jpg" alt="VIP Gala" />
           <div class="portfolio-details">
             <h4>VIP Gala Night</h4>
-            <p>Exclusive star-studded affair for special guests.</p>
+            <p>Exclusive star-studded event for high-profile guests.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Query Section (Formspree + AJAX for inline 'Thank You') -->
+    <!-- Query Section -->
     <section id="query">
       <h2 class="section-title">Send a Query</h2>
       <p class="query-text">
@@ -496,11 +443,8 @@
         bespoke solution.
       </p>
       <div class="query-form">
-        <!-- 
-            1) Replace 'YOUR_ID' with your actual Formspree ID 
-            2) We'll use JavaScript below to show success/error message 
-        -->
-        <form id="contactForm" action="https://formspree.io/f/YOUR_ID" method="POST">
+        <!-- Using 'mailto:' will open the user's default email client -->
+        <form action="mailto:Saisampathparimi12@gmail.com" method="post" enctype="text/plain">
           <label for="name">Full Name:</label><br />
           <input type="text" id="name" name="name" required /><br />
 
@@ -514,67 +458,26 @@
           <input type="text" id="eventType" name="eventType" required /><br />
 
           <label for="message">Additional Details:</label><br />
-          <textarea id="message" name="message" rows="5" required></textarea><br />
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            required
+          ></textarea><br />
 
           <button type="submit">Submit Query</button>
         </form>
-        <!-- Success & Error Messages -->
-        <div id="responseMessage" class="response-message"></div>
       </div>
     </section>
   </div>
 
-  <!-- ============ FOOTER ============ -->
+  <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Samruta Luxury Events | Celebrating Every Moment with Grace</p>
+    <div class="contact-info">
+      <p>Phone: +91-9182415589</p>
+      <p>Email: Saisampathparimi12@gmail.com</p>
+    </div>
   </footer>
-
-  <!-- ============ JAVASCRIPT for AJAX & Thank-You ============ -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const form = document.getElementById("contactForm");
-      const responseEl = document.getElementById("responseMessage");
-
-      form.addEventListener("submit", async function (e) {
-        e.preventDefault(); // prevent normal form redirect
-        responseEl.style.display = "none"; // reset message
-
-        const formData = new FormData(form);
-
-        try {
-          // Make a POST request to Formspree
-          const res = await fetch(form.action, {
-            method: "POST",
-            body: formData,
-            headers: {
-              Accept: "application/json"
-            }
-          });
-
-          if (res.ok) {
-            // Show success message
-            responseEl.textContent = "Thank you for your response!";
-            responseEl.classList.add("success");
-            responseEl.classList.remove("error");
-            responseEl.style.display = "block";
-            // Clear the form
-            form.reset();
-          } else {
-            // Show error message
-            responseEl.textContent = "Oops! Something went wrong. Please try again.";
-            responseEl.classList.remove("success");
-            responseEl.classList.add("error");
-            responseEl.style.display = "block";
-          }
-        } catch (error) {
-          // Network or other fetch-related errors
-          responseEl.textContent = "Error submitting form. Check your connection.";
-          responseEl.classList.remove("success");
-          responseEl.classList.add("error");
-          responseEl.style.display = "block";
-        }
-      });
-    });
-  </script>
 </body>
 </html>
